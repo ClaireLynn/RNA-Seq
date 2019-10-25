@@ -1,7 +1,7 @@
 # RNA-Seq Read Processing Guide
 
 This detailed guide was made to instruct keen beginners to process their own RNASeq data for downstream analysis.
-The bash script which generates all the directories and bash scripts for the pipline can be found in this folder [rnasetup.sh](rnasetup.sh).
+The bash script which generates all the directories and bash scripts for the pipline can be found in this folder [rnasetup.sh][**rnasetup.sh**](rnasetup.sh).
 
 Here, we will describe how to process your raw fastq files and get gene level counts for differential expression analysis.
 
@@ -79,7 +79,7 @@ If you make a mistake here, use ```find -type l -delete``` to delete all symlink
 ls *R1.fastq.gz | cut -c1-8 > prefix.txt
 ```
 
-5) Run [**rnasetup.sh**](chipsetup.sh) with bash, this will make all directories and bash scripts for you to use in this guide.
+5) Run [**rnasetup.sh**](rnasetup.sh) with bash, this will make all directories and bash scripts for you to use in this guide.
 
 You will need to give the script the genome file to map to (-g), the gtf file (-t), and the organism (-o).
 Make sure the genome and gtf files exist.
@@ -127,5 +127,17 @@ cd ../map
 qusub tophat2.sh
 
 ```
+
+4) cd to count, qsub **htseq.sh** 
+
+```
+cd ../count
+
+qusub htseq.sh
+
+```
+5) *Optional* 
+Now we can perform differential expression analysis, try out DESeq2 effortlessly by using the automatic Rscript I wrote in [**../autoDE**](../autoDE)
+
 
 
