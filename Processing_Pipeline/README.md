@@ -3,7 +3,7 @@
 This detailed guide was made to instruct keen beginners to process their own RNASeq data for downstream analysis.
 The bash script which generates all the directories and bash scripts for the pipline can be found in this folder [rnasetup.sh](rnasetup.sh).
 
-Here, we will describe how to process your raw fastq files and get peaks and track files for IGV.
+Here, we will describe how to process your raw fastq files and get gene level counts for differential expression analysis.
 
 ## Notes on bash scripts
 
