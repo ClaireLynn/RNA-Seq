@@ -79,7 +79,7 @@ If you make a mistake here, use ```find -type l -delete``` to delete all symlink
 ls *R1.fastq.gz | cut -c1-8 > prefix.txt
 ```
 
-5) Run [**chipsetup.sh**](chipsetup.sh) with bash, this will make all directories and bash scripts for you to use in this guide.
+5) Run [**rnasetup.sh**](chipsetup.sh) with bash, this will make all directories and bash scripts for you to use in this guide.
 
 You will need to give the script the genome file to map to (-g), the gtf file (-t), and the organism (-o).
 Make sure the genome and gtf files exist.
