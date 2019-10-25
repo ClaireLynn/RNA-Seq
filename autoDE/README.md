@@ -31,12 +31,13 @@ You must install the following packages:
   grid
 
 This script will spit out the following results files:
-name_PCA.pdf-This file is a PCA plot of your samples 
-contrast,.csv -This is your results, with normalised counts, ensembl and gene symbols
-contrast,_volc_plot.pdf -Volcano plot for particular contrast, threshold passing genes labelled
+
+name_PCA.pdf-This file is a PCA plot of your samples   
+contrast,.csv -This is your results, with normalised counts, ensembl and gene symbols  
+contrast,_volc_plot.pdf -Volcano plot for particular contrast, threshold passing genes labelled  
  
 If organism is mouse, you will also find the following additional files:
  
-contrast_human_symbols.csv -Results With human symbols 
-contrast_human_symbols_nodup.csv -Results with human symbols, duplicates human genes removed 
-contrast_human_symbols.rnk -human symbols, hgnc symbol and logfc ready for GSEA!
+contrast_human_symbols.csv -Results With human symbols  
+contrast_human_symbols_nodup.csv -Results with human symbols, duplicates human genes removed   
+contrast_human_symbols.rnk -human symbols, hgnc symbol and logfc ready for GSEA!  
