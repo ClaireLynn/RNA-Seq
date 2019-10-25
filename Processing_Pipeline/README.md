@@ -46,27 +46,27 @@ You may also add additional options when you run ```qsub```, reference: http://g
 1) In your scratch directory, make a directory for your project
 
 ``` 
-mkdir claire_rna2015 
+mkdir claire_rna2016 
 
 ```
 2) Next, find out where your files are!
 They will be deposited in the ~/groupso/SO_DATA directory, then in the directory corresponding to the sequencing date.
-As they are RNA-Seq samples they will begin with "R", followed by the unique 5 digit sample code, your intials eg. "CL" and end in ".fastq.gz". For example: R00447CL_R1.fastq.gz
+As they are RNA-Seq samples they will begin with "R", followed by the unique 5 digit sample code, your intials eg. "CL" and end in ".fastq.gz". For example: R00197CL_R1.fastq.gz
 
 You can use a wildcard (\*) to replace variable parts of the filename like this: R\*CL\*.fastq.gz
 Check you can find your files using ls:
 
 ```
-ls ~/groupso/SO_DATA/2015-04/R*CL*.fastq.gz
+ls ~/groupso/SO_DATA/2016-01/R*CL*.fastq.gz
 ```
 
 3) cd to your project and make symlinks of your fastq files.
 Make a file with all symlink commands called ln.sh, then run it with bash:
 
 ```
-cd claire_chip2016 
+cd claire_rna2016 
 
-ls ~/groupso/SO_DATA/2018-03/C*CL.fastq.gz | column -t | awk '{print "ln -s "$1}' > ln.sh
+ls ~/groupso/SO_DATA/2016-01/R*CL.fastq.gz | column -t | awk '{print "ln -s "$1}' > ln.sh
 
 bash ln.sh
 ```
@@ -79,7 +79,7 @@ If you make a mistake here, use ```find -type l -delete``` to delete all symlink
 ls *R1.fastq.gz | cut -c1-8 > prefix.txt
 ```
 
-5) Run **chipsetup.sh** with bash, this will make all directories and bash scripts for you to use in this guide.
+5) Run [**chipsetup.sh**](chipsetup.sh) with bash, this will make all directories and bash scripts for you to use in this guide.
 
 You will need to give the script the genome file to map to (-g), the gtf file (-t), and the organism (-o).
 Make sure the genome and gtf files exist.
