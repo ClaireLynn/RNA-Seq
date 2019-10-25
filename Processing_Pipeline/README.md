@@ -138,7 +138,7 @@ qusub htseq.sh
 ```
 5) *Optional* 
 
-Now we can perform differential expression analysis, try out DESeq2 effortlessly by using the automatic Rscript I wrote in the [**autoDE**](../../../autoDE) folder.
+Now we can perform differential expression analysis, try out DESeq2 effortlessly by using the automatic Rscript I wrote in the [**autoDE**](../../../tree/master/autoDE) folder.
 
 
 
