@@ -219,12 +219,13 @@ plot_myPCA(rld=rld,name=name,Height=10,Width=12,color=color,shape=shape, samples
 
 ######### Get gene symbols and human orthologs #########
 
+
+
+
+if(opt$organism=="mouse"){
 # Name the biomart database you want to use
 ensembl = useMart(biomart = "ENSEMBL_MART_ENSEMBL",
                   dataset= "mmusculus_gene_ensembl")
-
-if(opt$organism=="mouse"){
-
 # Fetch the mgi_symbols and produce a table with ensembl_gene_id | mgi_symbol
 mouse_symbols <- getBM(attributes = c("ensembl_gene_id","mgi_symbol","entrezgene_id"),
                        filters='ensembl_gene_id',
@@ -243,6 +244,9 @@ human_symbols <- rename(human_symbols,
 }
 
 if(opt$organism=="human"){
+# Name the biomart database you want to use
+ensembl = useMart(biomart = "ENSEMBL_MART_ENSEMBL",
+                  dataset= "hsapiens_gene_ensembl")
 human_symbols <- getBM(attributes = c("ensembl_gene_id","hgnc_symbol","entrezgene_id"),
                        filters='ensembl_gene_id',
                        values=gene.names,
@@ -291,7 +295,7 @@ SaveDeseqResults <- function(name,dds,contrast,
 	res_h<-merge(as.data.frame(human),as.data.frame(res),by.x=1,by.y=1, all.y=TRUE)
 	res_h[res_h == ""] <- NA
 	res_h<-na.omit(res_h)
-  res_h<-res_h[order(res_h$padj),]
+  	res_h<-res_h[order(res_h$padj),]
 	write.csv(as.data.frame(res_h),file=paste0(name,"_human_symbols.csv"), row.names=FALSE,quote=FALSE)
 
 		########## FIXING DUPLICATES FOR GSEA #########
