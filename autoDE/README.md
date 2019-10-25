@@ -16,10 +16,10 @@ Rscript --vanilla autoDE.R --help
 ```
 
 You must install the following packages from bioconductor (bioconductor.org, BiocManager::install()): 
-DESeq2
-TxDb.Mmusculus.UCSC.mm10.knownGene
-biomaRt 
-org.Mm.eg.db
+    DESeq2
+    TxDb.Mmusculus.UCSC.mm10.knownGene
+    biomaRt 
+    org.Mm.eg.db
 From CRAN (install.packages())
 RColorBrewer
 ggplot2 
