@@ -4,6 +4,7 @@ This detailed guide was made to instruct keen beginners to process their own RNA
 The bash script which generates all the directories and bash scripts for the pipline can be found in this folder [**rnasetup.sh**](rnasetup.sh).
 
 Here, we will describe how to process your raw fastq files and get gene level counts for differential expression analysis.
+The biggest advantage of using this pipeline is that it allows you to process all the files in your project simultaneously on the queuing system.
 
 ## Notes on bash scripts
 
