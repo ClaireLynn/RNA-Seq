@@ -105,14 +105,14 @@ gtf='$gtf'
 
 
 htseq-count --mode=union \
-			-t exon \
-			-i gene_id \
-			-f bam \
-			-r name \
-			-s reverse \
-			-a 30 \
-			../map/$myFile.nsort.bam $gtf \
-			>> $myFile.union.counts.txt
+		-t exon \
+		-i gene_id \
+		-f bam \
+		-r name \
+		-s reverse \
+		-a 30 \
+		../map/$myFile.nsort.bam $gtf \
+		>> $myFile.union.counts.txt
 
 
 exit 0;' > count/htseq.sh
