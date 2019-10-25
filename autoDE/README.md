@@ -16,16 +16,16 @@ Rscript --vanilla autoDE.R --help
 ```
 
 You must install the following packages from bioconductor (bioconductor.org, BiocManager::install()): 
-    DESeq2
-    TxDb.Mmusculus.UCSC.mm10.knownGene
-    biomaRt 
-    org.Mm.eg.db
-From CRAN (install.packages())
-RColorBrewer
-ggplot2 
-ggtern
-gplots
-grid
+⋅⋅* DESeq2
+⋅⋅* TxDb.Mmusculus.UCSC.mm10.knownGene
+⋅⋅* biomaRt 
+⋅⋅* org.Mm.eg.db
+⋅⋅* From CRAN (install.packages())
+⋅⋅* RColorBrewer
+⋅⋅* ggplot2 
+⋅⋅* ggtern
+⋅⋅* gplots
+⋅⋅* grid
 
 This script will spit out the following results files:
 name_PCA.pdf-This file is a PCA plot of your samples 
