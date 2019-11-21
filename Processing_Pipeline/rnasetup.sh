@@ -68,9 +68,8 @@ echo \
 
 myFile=`cat ../prefix.txt`
 myFile=`head -n $SGE_TASK_ID ../prefix.txt | tail -1`
+#So, the slurm ID corresponds to that line in the files
 
-
-#check is this correct?
 gtf='$gtf'
 genome='$genome'
 
@@ -94,15 +93,11 @@ echo \
 #$ -hold_jid tophat2
 #$ -N htseq
 
-
 myFile=`cat ../prefix.txt`
 myFile=`head -n $SGE_TASK_ID ../prefix.txt | tail -1`
+#So, the slurm ID corresponds to that line in the files
 
-#So, the PBS ID corresponds to that line in the files
-
-#check this is correct
 gtf='$gtf'
-
 
 htseq-count --mode=union \
 		-t exon \
