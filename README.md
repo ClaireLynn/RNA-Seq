@@ -6,4 +6,4 @@ This repository contains useful code for processing RNA-Seq data.
 
 [**autoDE**](autoDE) contains R scripts which take user supplied arguments and run from the command line to automate differential expression analysis.
 
-[**Analysis**](Analysis) contains R scripts and complementary markdowns of downstream RNA-Seq analysis. 
+[**Analysis**](Analysis) contains R scripts and complementary markdowns of downstream RNA-Seq analyses. 
